@@ -5,13 +5,13 @@ box_size = 20
 scene = canvas(title = "Bola Ungu Vpython", size= box_size, center = vector(0,0,0))
 scene.userzoom = False
 killer = False
-temp = 0
 
-wall_left = box(pos=vector(-box_size*1.1, 0, 0), size=vector(0.2, box_size*2.3, box_size*2.3), color=color.gray(0.5))
-wall_right = box(pos=vector(box_size*1.1, 0, 0), size=vector(0.2, box_size*2.3, box_size*2.3), color=color.gray(0.5))
-wall_top = box(pos=vector(0, box_size*1.1, 0), size=vector(box_size*2.3, 0.2, box_size*2.3), color=color.gray(0.5))
-wall_bottom = box(pos=vector(0, -box_size*1.1, 0), size=vector(box_size*2.3, 0.2, box_size*2.3), color=color.gray(0.5))
-wall_back = box(pos=vector(0, 0, -box_size*1.1), size=vector(box_size*2.3, box_size*2.3, 0.2), color=color.gray(0.5))
+
+wall_left = box(pos=vector(-box_size*1.15, 0, 0), size=vector(0.2, box_size*2.3, box_size*2.3), color=color.gray(0.5))
+wall_right = box(pos=vector(box_size*1.15, 0, 0), size=vector(0.2, box_size*2.3, box_size*2.3), color=color.gray(0.5))
+wall_top = box(pos=vector(0, box_size*1.15, 0), size=vector(box_size*2.3, 0.2, box_size*2.3), color=color.gray(0.5))
+wall_bottom = box(pos=vector(0, -box_size*1.15, 0), size=vector(box_size*2.3, 0.2, box_size*2.3), color=color.gray(0.5))
+wall_back = box(pos=vector(0, 0, -box_size*1.15), size=vector(box_size*2.3, box_size*2.3, 0.2), color=color.gray(0.5))
 
 
 def makeBall(jumlahBola, box_size, ball_radius):
@@ -84,10 +84,10 @@ def Keyboard(key_event):
     if key == 'down' and balls[0].pos.y >= -box_size:
         balls[0].pos.y -= speed
         balls[0].tujuan.y = 0 - speed
-    if key == 'right' and balls[0].pos.x <= box_size + temp:
+    if key == 'right' and balls[0].pos.x <= box_size:
         balls[0].pos.x += speed
         balls[0].tujuan.x = 0 + speed
-    if key == 'left' and balls[0].pos.x >= -box_size - temp:
+    if key == 'left' and balls[0].pos.x >= -box_size:
         balls[0].pos.x -= speed
         balls[0].tujuan.x = 0 - speed
 
