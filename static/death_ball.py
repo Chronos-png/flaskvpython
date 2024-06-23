@@ -109,7 +109,7 @@ button(bind = deathball, text = "menabrak berhenti", background=color.red)
 
 scene.append_to_caption('\n\n')
 
-balls = makeBall(5, box_size, 2)
+balls = makeBall(6, box_size, 2)
 balls = coloring_ball(balls)
 
 kecepatan = 1
